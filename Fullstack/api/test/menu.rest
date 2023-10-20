@@ -1,0 +1,47 @@
+// Test file for the REST client extension in VS Code
+// Use ### to separate different requests
+
+###
+// Returns array of all menu items
+GET http://localhost:5000/menu
+
+###
+// Get specific menu item given ID
+GET http://localhost:5000/menu/636057a3f5ee113e1faf0944
+
+###
+// Add a Philly Bagel to the menu (complete)
+POST http://localhost:5000/menu
+Content-Type: application/json
+
+{
+    "name": "Philly",
+    "price": 8.00,
+    "ingredientsEnglish": ["Sesame seed bun", "Philly Steak", "Cheese", "Cream cheese", "Bacon"],
+    "ingredientsFinnish": ["Seesaminsiemen pulla", "Philly Steak", "Juusto", "Kermajuusto", "Pekoni"]
+}
+
+###
+// Add a Ham & Egg Bagel to the menu (incomplete)
+POST http://localhost:5000/menu
+Content-Type: application/json
+
+{
+    "name": "Ham & Egg",
+    "price": 6.00,
+    "ingredientsEnglish": ["Homemade bagel", "Egg", "Ham", "Cheese"]
+}
+
+###
+// Delete menu item given ID
+DELETE http://localhost:5000/menu/6374b2c5f3269b6728b6aab2
+
+###
+// Change menu item properties given ID
+PATCH http://localhost:5000/menu/636055a2ecbe710a4d848230
+Content-Type: application/json
+
+{
+    "name": "Philly v2",
+    "price": 9.50
+}

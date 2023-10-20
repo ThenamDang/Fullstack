@@ -1,0 +1,27 @@
+.contentcontainer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15%;
+    padding-right:15%;
+}
+.title {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    font-weight: 'bold';
+    font-size: 60px;
+}
+
+.content {
+line-height: 1.5;
+text-indent: 5%;}
+
+.pic {
+    height: 75vh;
+    width: 60%;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

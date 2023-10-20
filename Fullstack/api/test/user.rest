@@ -1,0 +1,46 @@
+// Test file for the REST client extension in VS Code
+// Use ### to separate different requests
+GET http://localhost:5000/users
+
+###
+// Get user by their ID
+GET http://localhost:5000/users/6384fae1a9806dccdb3727a2
+
+###
+// Get user by their phone number
+GET http://localhost:5000/users/byPhone/+3584206969
+
+###
+
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Alex Haukka",
+    "phoneNumber": "+358449743011"
+}
+
+###
+
+DELETE http://localhost:5000/users/63756f8d02876a4cd9a0fb8f
+
+###
+
+PATCH http://localhost:5000/users/6373de0bb22e8611d31a0b67
+Content-Type: application/json
+
+{
+    "name": "Virgile Hero",
+    "phoneNumber": "+358442449638",
+    "email": "jerseyboybagelsfi@gmail.com"
+}
+
+###
+POST  http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Virgile Hero",
+    "phoneNumber": "+358442449638",
+    "email": "jerseyboybagelsfi@gmail.com"
+}

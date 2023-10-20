@@ -1,0 +1,16 @@
+POST http://localhost:5000/twilio-sms/send-otp
+Content-Type: application/json
+
+{
+    "phoneNumber": "+358449743011"
+}
+
+###
+
+POST http://localhost:5000/twilio-sms/verify-otp
+Content-Type: application/json
+
+{
+    "phoneNumber": "+358449743011",
+    "code": "540122"
+}

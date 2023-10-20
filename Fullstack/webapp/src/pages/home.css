@@ -1,0 +1,57 @@
+.App {
+    flex-direction: column;
+    display: flex;
+}
+
+.frontImage {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    background: linear-gradient(to bottom, white 70%, #2F2E2C 30%);
+}
+
+.pic {
+    height: 75vh;
+    width: 60%;
+}
+
+.bg {
+    background: #2F2E2C;
+}
+
+.callToAction {
+    display: flex;
+    font-size: larger;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.callToActionText {
+    color: #fff;
+    text-align: center;
+    background-color: black;
+}
+
+.bagelContent {
+    text-align: center;
+}
+
+.lang{
+    text-align: end;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    background-color: #2F2E2C;
+}
+
+.menu {
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+@media (min-width: 1140px) {
+    .menu{
+        width: 50%;
+    }
+}

@@ -1,0 +1,12 @@
+FROM node:latest
+COPY ./webapp /opt/app
+
+# `rm package-lock.json`: https://stackoverflow.com/questions/63321707/react-npm-install-fails
+RUN cd /opt/app && rm package-lock.json && npm install && npm run build
+WORKDIR /opt/app
+
+ARG REACT_APP_BACKEND_PORT
+RUN sh create-env-file.sh REACT_APP_BACKEND_PORT=$REACT_APP_BACKEND_PORT
+
+RUN npm install
+CMD ["npx", "serve", "-s", "build"]
